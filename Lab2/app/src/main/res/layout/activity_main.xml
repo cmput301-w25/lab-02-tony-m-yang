@@ -10,7 +10,38 @@
     <ListView
         android:id="@+id/city_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="681dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
     </ListView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/city_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/addButtonId"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="193dp"
+            android:layout_height="50dp"
+            android:text="ADD CITY" />
+
+        <Button
+            android:id="@+id/deleteButtonId"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="193dp"
+            android:layout_height="50dp"
+            android:text="DELETE CITY" />
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

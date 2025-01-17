@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -61,10 +60,14 @@ public class MainActivity extends AppCompatActivity {
         confrimButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dataList.add(String.valueOf((cityInput.getText())));
-                cityAdapter.notifyDataSetChanged();
+                // Get the text inputted and add to list if input is not empty
+                String input = String.valueOf((cityInput.getText()));
+                if (!input.isEmpty()) {
+                    dataList.add(input);
+                    cityAdapter.notifyDataSetChanged();
+                }
                 // make layout invisible again
-                inputLayout.setVisibility(View.INVISIBLE);
+                inputLayout.setVisibility(View.GONE);
                 // reset text in edit text
                 cityInput.setText("");
             }
@@ -74,7 +77,8 @@ public class MainActivity extends AppCompatActivity {
         // Set item click listener to select an item
         cityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
                 itemSelected = dataList.get(position);
             }
         });
@@ -87,6 +91,5 @@ public class MainActivity extends AppCompatActivity {
                 cityAdapter.notifyDataSetChanged();
             }
         });
-
     }
 }

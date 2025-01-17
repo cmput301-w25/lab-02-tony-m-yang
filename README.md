@@ -8,11 +8,17 @@
 
 ## References and Resources
 
-https://developer.android.com/develop/ui/views/components/button#java
+The framework for my button code was taken from https://developer.android.com/develop/ui/views/components/button#java
+Authored by: Androids Developers
+Taken By: Tony Yang
+Taken On: Jan. 17 2025
+Button button = (Button) findViewById(R.id.supabutton);
+button.setOnClickListener(new View.OnClickListener() {
+    public void onClick(View v) {
+      Log.d("BUTTONS", "User tapped the Supabutton"); // I swapped this line out for whatever I needed
+    }
+});
 
-https://www.youtube.com/watch?v=Eiw5kRObUS0
-
-List any resources used here, or simply put `N/A` if not applicable.
 
 ## Verbal Collaboration
 

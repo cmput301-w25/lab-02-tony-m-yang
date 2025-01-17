@@ -10,12 +10,48 @@
     <ListView
         android:id="@+id/city_list"
         android:layout_width="match_parent"
-        android:layout_height="681dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
     </ListView>
+
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:background="#FFF4FC">
+
+        <EditText
+            android:id="@+id/textInput"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:hint="Enter City..."
+            android:inputType="text"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/confirmButtonId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </EditText>
+
+        <Button
+            android:id="@+id/confirmButtonId"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:text="CONFIRM"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textInput"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -30,16 +66,24 @@
         <Button
             android:id="@+id/addButtonId"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="193dp"
-            android:layout_height="50dp"
-            android:text="ADD CITY" />
+            android:layout_width="195dp"
+            android:layout_height="match_parent"
+            android:text="ADD CITY"
+            app:layout_constraintBottom_toTopOf="@+id/city_list"
+            app:layout_constraintEnd_toEndOf="@+id/deleteButtonId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/deleteButtonId"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="193dp"
-            android:layout_height="50dp"
-            android:text="DELETE CITY" />
+            android:layout_width="195dp"
+            android:layout_height="match_parent"
+            android:text="DELETE CITY"
+            app:layout_constraintBottom_toTopOf="@+id/city_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/addButtonId"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
 

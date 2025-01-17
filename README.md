@@ -3,12 +3,14 @@
 
 ## Student Details
 
-- **Full Name:** `<Enter name>`
-- **CCID:** `<Enter ccid>`
+- **Full Name:** `<Tony Yang>`
+- **CCID:** `<tmyang>`
 
 ## References and Resources
 
 https://developer.android.com/develop/ui/views/components/button#java
+
+https://www.youtube.com/watch?v=Eiw5kRObUS0
 
 List any resources used here, or simply put `N/A` if not applicable.
 
